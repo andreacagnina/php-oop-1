@@ -7,10 +7,10 @@ class Movie
     public $duration;
     public $main_actors;
     public $director;
-    public $language;
+    public static $language = 'English';
     public static $distribution = 'Streaming';
 
-    function __construct($title, $genre, $year, $duration, $main_actors, Director $director, $language)
+    function __construct($title, $genre, $year, $duration, $main_actors, Director $director)
     {
         $this->title = $title;
         $this->genre = $genre;
@@ -18,12 +18,16 @@ class Movie
         $this->duration = $duration;
         $this->main_actors = $main_actors;
         $this->director = $director;
-        $this->language = $language;
     }
 
     public function getStreamingMessage()
     {
         return self::$distribution;
+    }
+
+    public function getLanguage()
+    {
+        return self::$language;
     }
 
     public function setDurationType($duration)
@@ -56,7 +60,10 @@ class Director
     }
 }
 
-$The_avengers = new Movie('The Avengers', 'Action', 2012, 143, 'Robert Downey Jr', new Director('Joss', 'Whedon', '1964/06/23', 'Male', 'American'), 'English')
+$The_avengers = new Movie('The Avengers', 'Action', 2012, 143, 'Robert Downey Jr', new Director('Joss', 'Whedon', '1964/06/23', 'Male', 'American'));
+$Avengers_Age_of_Ultron = new Movie('Avengers: Age of Ultron', 'Action', 2015, 141, 'James Spader', new Director('Joss', 'Whedon', '1964/06/23', 'Male', 'American'));
+$Avengers_Infinity_War = new Movie('Avengers: Infinity War', 'Action', 2018, 149, 'Chris Hemsworth', new Director('Anthony', 'Russo', '1970/02/03', 'Male', 'American'));
+$Avengers_End_Game = new Movie('Avengers: Endgame', 'Action', 2019, 181, 'Josh Brolin', new Director('Joe', 'Russo', '1971/07/18', 'Male', 'American'));
 
 ?>
 
