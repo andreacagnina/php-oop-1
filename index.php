@@ -8,6 +8,16 @@ class Movie
     public $director;
     public $language;
     public static $distribution = 'Streaming';
+
+    function __construct($title, $genre, $duration, $main_actors, $director, $language)
+    {
+        $this->title = $title;
+        $this->genre = $genre;
+        $this->duration = $duration;
+        $this->main_actors = $main_actors;
+        $this->director = $director;
+        $this->language = $language;
+    }
 }
 
 ?>
