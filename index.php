@@ -38,6 +38,8 @@ class Movie
             return $typeOfDuration = '(Mediometraggio)';
         } else if ($typeOfDuration > 90 && $typeOfDuration < 180) {
             return $typeOfDuration = '(Lungometraggio)';
+        } else {
+            return $typeOfDuration = '(Epico)';
         }
     }
     public function getAge()
@@ -110,12 +112,12 @@ $Avengers_End_Game->getAge();
 </head>
 
 <body>
-    <div class="container my-5">
+    <div class="container my-5 text-center">
         <div class="row">
             <div class="col-12">
                 <div class="content">
                     <?php { ?>
-                        <ul>
+                        <ul class="list-unstyled py-3">
                             <li>
                                 <h2>
                                     <?php echo $The_avengers->title ?>
@@ -161,7 +163,7 @@ $Avengers_End_Game->getAge();
                         </ul>
                         <HR>
                         </HR>
-                        <ul>
+                        <ul class="list-unstyled py-3">
                             <li>
                                 <h2>
                                     <?php echo $Avengers_Age_of_Ultron->title ?>
@@ -206,7 +208,7 @@ $Avengers_End_Game->getAge();
                             </li>
                         </ul>
                         <hr>
-                        <ul>
+                        <ul class="list-unstyled py-3">
                             <li>
                                 <h2>
                                     <?php echo $Avengers_Infinity_War->title ?>
@@ -251,7 +253,7 @@ $Avengers_End_Game->getAge();
                             </li>
                         </ul>
                         <hr>
-                        <ul>
+                        <ul class="list-unstyled py-3">
                             <li>
                                 <h2>
                                     <?php echo $Avengers_End_Game->title ?>
@@ -301,19 +303,6 @@ $Avengers_End_Game->getAge();
             </div>
         </div>
     </div>
-
-    <!-- - è definita una classe ‘Movie’
-    => all'interno della classe sono dichiarate delle variabili d'istanza
-    => all'interno della classe è definito un costruttore
-    => all'interno della classe è definito almeno un metodo
-    - vengono istanziati almeno due oggetti ‘Movie’ e stampati a schermo i valori delle relative proprietàBonus 1:
-    Modificare la classe Movie in modo che accetti piú di un genere.Bonus 2:
-    Creare un layout completo per stampare a schermo una lista di movies.
-    Facciamo attenzione all’organizzazione del codice, suddividendolo in appositi file e cartelle. Possiamo ad esempio organizzare il codice
-    - creando un file dedicato ai dati (tipo le array di oggetti) che potremmo chiamare db.php
-    - mettendo ciascuna classe nel proprio file e magari raggruppare tutte le classi in una cartella dedicata che possiamo chiamare Models/
-    - organizzando il layout dividendo la struttura ed i contenuti in file e parziali dedicati. -->
-
 </body>
 
 </html>
