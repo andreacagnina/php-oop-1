@@ -73,31 +73,6 @@ $Avengers_Age_of_Ultron = new Movie('Avengers: Age of Ultron', ['Action', 'Adven
 $Avengers_Infinity_War = new Movie('Avengers: Infinity War', ['Action', 'Adventure', 'Science Fiction'], 2018, 149, 'Chris Hemsworth', new Director('Anthony', 'Russo', new DateTime('1970-02-03')));
 $Avengers_End_Game = new Movie('Avengers: Endgame', ['Action', 'Adventure', 'Science Fiction'], 2019, 181, 'Josh Brolin', new Director('Joe', 'Russo', new DateTime('1971-07-18')));
 
-$The_avengers->getStreamingMessage();
-$The_avengers->getLanguage();
-$The_avengers->getFullName();
-$The_avengers->setDurationType('duration');
-$The_avengers->getAge();
-
-$Avengers_Age_of_Ultron->getStreamingMessage();
-$Avengers_Age_of_Ultron->getLanguage();
-$Avengers_Age_of_Ultron->getFullName();
-$Avengers_Age_of_Ultron->setDurationType('duration');
-$Avengers_Age_of_Ultron->getAge();
-
-$Avengers_Infinity_War->getStreamingMessage();
-$Avengers_Infinity_War->getLanguage();
-$Avengers_Infinity_War->getFullName();
-$Avengers_Infinity_War->setDurationType('duration');
-$Avengers_Infinity_War->getAge();
-
-$Avengers_End_Game->getStreamingMessage();
-$Avengers_End_Game->getLanguage();
-$Avengers_End_Game->getFullName();
-$Avengers_End_Game->setDurationType('duration');
-$Avengers_End_Game->getAge();
-
-
 ?>
 
 
@@ -126,7 +101,7 @@ $Avengers_End_Game->getAge();
                             <li>
                                 <h3>
                                     Genere: <?php foreach ($The_avengers->genres as $genre) { ?>
-                                        <?php echo $genre; ?>-
+                                        <?php echo $genre; ?> ,
                                     <?php } ?>
                                 </h3>
                             </li>
@@ -172,7 +147,7 @@ $Avengers_End_Game->getAge();
                             <li>
                                 <h3>
                                     Genere: <?php foreach ($The_avengers->genres as $genre) { ?>
-                                        <?php echo $genre; ?>-
+                                        <?php echo $genre; ?> ,
                                     <?php } ?>
                                 </h3>
                             </li>
@@ -217,7 +192,7 @@ $Avengers_End_Game->getAge();
                             <li>
                                 <h3>
                                     Genere: <?php foreach ($The_avengers->genres as $genre) { ?>
-                                        <?php echo $genre; ?>-
+                                        <?php echo $genre; ?> ,
                                     <?php } ?>
                                 </h3>
                             </li>
@@ -262,7 +237,7 @@ $Avengers_End_Game->getAge();
                             <li>
                                 <h3>
                                     Genere: <?php foreach ($The_avengers->genres as $genre) { ?>
-                                        <?php echo $genre; ?>-
+                                        <?php echo $genre; ?> ,
                                     <?php } ?>
                                 </h3>
                             </li>
