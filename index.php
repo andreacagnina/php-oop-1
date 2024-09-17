@@ -9,7 +9,7 @@ class Movie
     public $language;
     public static $distribution = 'Streaming';
 
-    function __construct($title, $genre, $duration, $main_actors, $director, $language)
+    function __construct($title, $genre, $duration, $main_actors, Director $director, $language)
     {
         $this->title = $title;
         $this->genre = $genre;
@@ -17,6 +17,22 @@ class Movie
         $this->main_actors = $main_actors;
         $this->director = $director;
         $this->language = $language;
+    }
+}
+
+class Director
+{
+    public $name;
+    public $surname;
+    public $date_of_birth;
+    public $nationality;
+
+    function __construct($name, $surname, $date_of_birth, $nationality)
+    {
+        $this->name = $name;
+        $this->surname = $surname;
+        $this->date_of_birth = $date_of_birth;
+        $this->nationality = $nationality;
     }
 }
 
