@@ -3,20 +3,38 @@ class Movie
 {
     public $title;
     public $genre;
+    public $year;
     public $duration;
     public $main_actors;
     public $director;
     public $language;
     public static $distribution = 'Streaming';
 
-    function __construct($title, $genre, $duration, $main_actors, Director $director, $language)
+    function __construct($title, $genre, $year, $duration, $main_actors, Director $director, $language)
     {
         $this->title = $title;
         $this->genre = $genre;
+        $this->year = $year;
         $this->duration = $duration;
         $this->main_actors = $main_actors;
         $this->director = $director;
         $this->language = $language;
+    }
+
+    public function getStreamingMessage()
+    {
+        return self::$distribution;
+    }
+
+    public function setDurationType($duration)
+    {
+        if ($duration < 40) {
+            return $duration += '(Cortometraggio)';
+        } else if ($duration > 40 && $duration < 60) {
+            return $duration += '(Mediometraggio)';
+        } else if ($duration > 90 && $duration < 180) {
+            return $duration += '(Lungometraggio)';
+        }
     }
 }
 
@@ -25,16 +43,20 @@ class Director
     public $name;
     public $surname;
     public $date_of_birth;
+    public $gender;
     public $nationality;
 
-    function __construct($name, $surname, $date_of_birth, $nationality)
+    function __construct($name, $surname, $date_of_birth, $gender, $nationality)
     {
         $this->name = $name;
         $this->surname = $surname;
         $this->date_of_birth = $date_of_birth;
+        $this->gender = $gender;
         $this->nationality = $nationality;
     }
 }
+
+$The_avengers = new Movie('The Avengers', 'Action', 2012, 143, 'Robert Downey Jr', new Director('Joss', 'Whedon', '1964/06/23', 'Male', 'American'), 'English')
 
 ?>
 
