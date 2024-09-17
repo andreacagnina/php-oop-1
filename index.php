@@ -2,7 +2,7 @@
 class Movie
 {
     public $title;
-    public $genre;
+    public $genres;
     public $year;
     public $duration;
     public $main_actor;
@@ -10,10 +10,10 @@ class Movie
     public static $language = 'English';
     public static $distribution = 'Streaming';
 
-    function __construct($title, $genre, $year, $duration, $main_actor, Director $director)
+    function __construct($title, array $genres, $year, $duration, $main_actor, Director $director)
     {
         $this->title = $title;
-        $this->genre = $genre;
+        $this->genres = $genres;
         $this->year = $year;
         $this->duration = $duration;
         $this->main_actor = $main_actor;
@@ -66,10 +66,10 @@ class Director
     }
 }
 
-$The_avengers = new Movie('The Avengers', 'Action', 2012, 10, 'Robert Downey Jr', new Director('Joss', 'Whedon', new DateTime('1964-06-23')));
-$Avengers_Age_of_Ultron = new Movie('Avengers: Age of Ultron', 'Action', 2015, 141, 'James Spader', new Director('Joss', 'Whedon', new DateTime('1964-06-23')));
-$Avengers_Infinity_War = new Movie('Avengers: Infinity War', 'Action', 2018, 149, 'Chris Hemsworth', new Director('Anthony', 'Russo', new DateTime('1970-02-03')));
-$Avengers_End_Game = new Movie('Avengers: Endgame', 'Action', 2019, 181, 'Josh Brolin', new Director('Joe', 'Russo', new DateTime('1971-07-18')));
+$The_avengers = new Movie('The Avengers', ['Action', 'Adventure', 'Science Fiction'], 2012, 10, 'Robert Downey Jr', new Director('Joss', 'Whedon', new DateTime('1964-06-23')));
+$Avengers_Age_of_Ultron = new Movie('Avengers: Age of Ultron', ['Action', 'Adventure', 'Science Fiction'], 2015, 141, 'James Spader', new Director('Joss', 'Whedon', new DateTime('1964-06-23')));
+$Avengers_Infinity_War = new Movie('Avengers: Infinity War', ['Action', 'Adventure', 'Science Fiction'], 2018, 149, 'Chris Hemsworth', new Director('Anthony', 'Russo', new DateTime('1970-02-03')));
+$Avengers_End_Game = new Movie('Avengers: Endgame', ['Action', 'Adventure', 'Science Fiction'], 2019, 181, 'Josh Brolin', new Director('Joe', 'Russo', new DateTime('1971-07-18')));
 
 $The_avengers->getStreamingMessage();
 $The_avengers->getLanguage();
@@ -123,7 +123,9 @@ $Avengers_End_Game->getAge();
                             </li>
                             <li>
                                 <h3>
-                                    Genere: <?php echo $The_avengers->genre ?>
+                                    Genere: <?php foreach ($The_avengers->genres as $genre) { ?>
+                                        <?php echo $genre; ?>-
+                                    <?php } ?>
                                 </h3>
                             </li>
                             <li>
@@ -167,7 +169,9 @@ $Avengers_End_Game->getAge();
                             </li>
                             <li>
                                 <h3>
-                                    Genere: <?php echo $Avengers_Age_of_Ultron->genre ?>
+                                    Genere: <?php foreach ($The_avengers->genres as $genre) { ?>
+                                        <?php echo $genre; ?>-
+                                    <?php } ?>
                                 </h3>
                             </li>
                             <li>
@@ -210,7 +214,9 @@ $Avengers_End_Game->getAge();
                             </li>
                             <li>
                                 <h3>
-                                    Genere: <?php echo $Avengers_Infinity_War->genre ?>
+                                    Genere: <?php foreach ($The_avengers->genres as $genre) { ?>
+                                        <?php echo $genre; ?>-
+                                    <?php } ?>
                                 </h3>
                             </li>
                             <li>
@@ -253,7 +259,9 @@ $Avengers_End_Game->getAge();
                             </li>
                             <li>
                                 <h3>
-                                    Genere: <?php echo $Avengers_End_Game->genre ?>
+                                    Genere: <?php foreach ($The_avengers->genres as $genre) { ?>
+                                        <?php echo $genre; ?>-
+                                    <?php } ?>
                                 </h3>
                             </li>
                             <li>
