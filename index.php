@@ -73,6 +73,8 @@ $Avengers_Age_of_Ultron = new Movie('Avengers: Age of Ultron', ['Action', 'Adven
 $Avengers_Infinity_War = new Movie('Avengers: Infinity War', ['Action', 'Adventure', 'Science Fiction'], 2018, 149, 'Chris Hemsworth', new Director('Anthony', 'Russo', new DateTime('1970-02-03')));
 $Avengers_End_Game = new Movie('Avengers: Endgame', ['Action', 'Adventure', 'Science Fiction'], 2019, 181, 'Josh Brolin', new Director('Joe', 'Russo', new DateTime('1971-07-18')));
 
+
+
 ?>
 
 
@@ -100,8 +102,8 @@ $Avengers_End_Game = new Movie('Avengers: Endgame', ['Action', 'Adventure', 'Sci
                             </li>
                             <li>
                                 <h3>
-                                    Genere: <?php foreach ($The_avengers->genres as $genre) { ?>
-                                        <?php echo $genre; ?> ,
+                                    Genere: <?php { ?>
+                                        <?php echo implode(', ', $The_avengers->genres); ?>
                                     <?php } ?>
                                 </h3>
                             </li>
@@ -146,8 +148,8 @@ $Avengers_End_Game = new Movie('Avengers: Endgame', ['Action', 'Adventure', 'Sci
                             </li>
                             <li>
                                 <h3>
-                                    Genere: <?php foreach ($The_avengers->genres as $genre) { ?>
-                                        <?php echo $genre; ?> ,
+                                    Genere: <?php { ?>
+                                        <?php echo implode(', ', $Avengers_Age_of_Ultron->genres); ?>
                                     <?php } ?>
                                 </h3>
                             </li>
@@ -191,8 +193,8 @@ $Avengers_End_Game = new Movie('Avengers: Endgame', ['Action', 'Adventure', 'Sci
                             </li>
                             <li>
                                 <h3>
-                                    Genere: <?php foreach ($The_avengers->genres as $genre) { ?>
-                                        <?php echo $genre; ?> ,
+                                    Genere: <?php { ?>
+                                        <?php echo implode(', ', $Avengers_Infinity_War->genres); ?>
                                     <?php } ?>
                                 </h3>
                             </li>
@@ -236,8 +238,8 @@ $Avengers_End_Game = new Movie('Avengers: Endgame', ['Action', 'Adventure', 'Sci
                             </li>
                             <li>
                                 <h3>
-                                    Genere: <?php foreach ($The_avengers->genres as $genre) { ?>
-                                        <?php echo $genre; ?> ,
+                                    Genere: <?php { ?>
+                                        <?php echo implode(', ', $Avengers_End_Game->genres); ?>
                                     <?php } ?>
                                 </h3>
                             </li>
